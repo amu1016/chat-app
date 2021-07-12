@@ -8,10 +8,10 @@
     </div>
     <div class="side-bottom">
       <div class="chat-rooms">
-        <ul>
+        <div class="chat-room">
           <% current_user.rooms.each do |room| %>
-          <li class="chat-room"><a href="#"><%= room.name %></a></li>
-          <% end %>
-        </ul>
+          <%= link_to room.name, room_messages_path(room) %>
+           <% end %>
+        </div>
       </div>
     </div>
